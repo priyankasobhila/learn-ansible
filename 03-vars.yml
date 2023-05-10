@@ -18,7 +18,6 @@
 
 
 
-
 - name: Demo on task level variables
   hosts: all
   tasks:
@@ -28,3 +27,10 @@
       vars:
         URL: task.example.com
 
+
+- name: variables from roles
+  hosts: all
+  vars:
+    URL_PLAY: play.example.com
+  roles:
+    - sample
